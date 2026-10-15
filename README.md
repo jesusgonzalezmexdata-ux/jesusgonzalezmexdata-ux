@@ -3,6 +3,8 @@
 ### Data Scientist · Analítica de Operaciones y Calidad · Gestión de Proyectos Técnicos
 
 > **Convierto problemas operativos en preguntas medibles, evidencia y decisiones.**
+>
+> *I turn operational problems into measurable questions, evidence and decisions.*
 
 Mi trayectoria combina experiencia industrial en manufactura, calidad y logística en Alemania con formación y práctica en Ciencia de Datos. Trabajo en la intersección entre **proceso físico, datos y decisión**: primero estructuro el problema, después determino si los datos permiten responderlo y solo entonces elijo la metodología.
 
@@ -28,54 +30,18 @@ Mi enfoque prioriza **trazabilidad, validación, incertidumbre, reproducibilidad
 
 ## Proyectos destacados
 
-### [Predictive Quality · MLOps](https://github.com/jesusgonzalezmexdata-ux/predictive-quality-mlops)
+| Proyecto | Pregunta de negocio | Resultado | Datos | Stack |
+|---|---|---|---|---|
+| [APS Failure Intelligence](https://github.com/jesusgonzalezmexdata-ux/aps-failure-intelligence) | ¿Qué camiones Scania mando a revisar el sistema de aire? | Coste oficial 11,540 frente a 187,500 sin triaje (**−94 %**), 95.7 % de fallas detectadas; test oficial evaluado una sola vez | Reales, públicos | LightGBM · DuckDB SQL · FastAPI · Docker · Streamlit |
+| [Mantenimiento por condición (C-MAPSS)](https://github.com/jesusgonzalezmexdata-ux/predictive-maintenance-survival-cmapss) | ¿Qué motores intervengo ahora y cuánto ahorro frente a reemplazar por edad? | **−40 %** de coste frente a reemplazo por edad; C-index 0.85 (IC95 0.80–0.89) | Simulados (NASA) | Supervivencia (Weibull AFT, Cox) · Streamlit · Docker |
+| [Steel Plates · Quality MLOps](https://github.com/jesusgonzalezmexdata-ux/steel-plates-quality-mlops) | ¿Qué defecto tiene cada placa y cuándo conviene la revisión manual? | Modelo congelado con holdout consumido una vez; la revisión manual compensa si la razón de costes está entre 3.1 y 53 (con un revisor perfecto) | Reales, públicos | scikit-learn · dbt · DuckDB · ONNX · Power BI |
+| [Predictive Quality · MLOps](https://github.com/jesusgonzalezmexdata-ux/predictive-quality-mlops) | ¿Qué lotes de semiconductores retengo? | Ordena mejor que el azar, pero el ahorro **no es significativo** (IC95 −22k a +20k MXN) y se publica así | Reales, públicos | FastAPI · SHAP · drift · Streamlit |
+| [Scrap y COPQ](https://github.com/jesusgonzalezmexdata-ux/scrap-copq-analytics) | ¿Dónde se va el dinero de la no calidad en una planta de autopartes? | Palancas por 1.23 M MXN/año (14.5 % del COPQ) | Sintéticos | SQL · GLM binomial · SPC · Streamlit |
+| [Predix](https://github.com/jesusgonzalezmexdata-ux/predix) | ¿Cuánto pedir cada lunes y jueves en una tienda de abarrotes? | **−46 %** en coste de reponer mal y −30 % de inventario | Sintéticos | Binomial negativa censurada · simulación · Streamlit |
 
-Sistema de soporte a decisiones de calidad industrial con **SECOM + NASA C-MAPSS**.
+**Qué tienen en común:** baseline antes que modelo, validación sin fuga de información, umbrales elegidos por costo de error, incertidumbre visible y límites declarados.
 
-- Validación temporal para evitar fuga de información.
-- Umbrales definidos por costo de error, no por una métrica aislada.
-- SHAP con límites explícitos de interpretación.
-- Monitoreo de drift, API con FastAPI, dashboard en Streamlit y registro de predicciones.
-- Docker, GitHub Actions y pruebas automatizadas.
-- El posible ahorro en SECOM **no quedó estadísticamente demostrado** y se publica así.
-
-**Qué demuestra:** modelado, validación rigurosa, incertidumbre, ingeniería de entrega y criterio para no inflar resultados.
-
----
-
-### [Analítica de Scrap y COPQ](https://github.com/jesusgonzalezmexdata-ux/scrap-copq-analytics)
-
-Caso demostrativo de manufactura construido con **datos sintéticos** para analizar scrap y costo de no calidad.
-
-- Limpieza y validación de datos de planta.
-- Pareto por piezas y por costo.
-- Cartas p y p′ de Laney.
-- GLM binomial y validación fuera de muestra.
-- Simulación de palancas operativas y sensibilidad económica.
-- SQL, Python, Streamlit y pruebas automatizadas.
-
-**Qué demuestra:** conexión entre calidad, estadística, operación y decisión económica sin presentar una simulación como impacto real observado.
-
----
-
-### [Predix · Demanda e Inventario](https://github.com/jesusgonzalezmexdata-ux/predix)
-
-Sistema de pronóstico y reposición para retail con **datos sintéticos**.
-
-- Modelado de demanda censurada cuando existe stockout.
-- Comparación contra baselines simples.
-- Pronóstico fuera de muestra.
-- Política de inventario y nivel de servicio por producto.
-- Simulación de merma, faltantes y capital inmovilizado.
-- Dashboard en Streamlit y pruebas automatizadas.
-
-**Qué demuestra:** forecasting orientado a decisiones, no solo a precisión estadística.
-
----
-
-### Otros trabajos
-
-- [Steel Plates · Quality BI](https://github.com/jesusgonzalezmexdata-ux/steel-plates-quality-bi) — modelo estrella, ETL, DAX/Power Query, métricas de calidad y validación cruzada Python/SQL. La ejecución final en Power BI Desktop y el `.pbix` todavía deben cerrarse antes de presentarlo como evidencia completa de Power BI.
+**Otros trabajos:** [Steel Plates · Quality BI](https://github.com/jesusgonzalezmexdata-ux/steel-plates-quality-bi): modelo estrella, DAX/Power Query y reglas de acción ISO 9001. El `.pbix` está pendiente de validar en Power BI Desktop.
 
 ---
 
@@ -93,7 +59,7 @@ Sistema de pronóstico y reposición para retail con **datos sintéticos**.
 
 ## Stack
 
-**Python · SQL · pandas · NumPy · SciPy · statsmodels · scikit-learn · LightGBM · Streamlit · FastAPI · Docker · GitHub Actions · pytest**
+**Python · SQL · DuckDB · dbt · pandas · NumPy · SciPy · statsmodels · scikit-learn · LightGBM · análisis de supervivencia · Power BI (DAX, M) · Streamlit · FastAPI · ONNX · Docker · GitHub Actions · pytest**
 
 ---
 
