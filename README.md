@@ -36,7 +36,9 @@ Every case states whether its data is real, simulated or synthetic. Results from
 
 Baseline before model · time-based validation without leakage · thresholds chosen by cost of error · uncertainty shown · limits declared.
 
-**Stack:** Python · SQL (PostgreSQL, DuckDB, dbt) · scikit-learn · LightGBM · statsmodels · survival analysis · Power BI (DAX, M) · Streamlit · FastAPI · Docker · MLflow · GitHub Actions · pytest
+**Stack:** Python (pandas, scikit-learn, LightGBM, statsmodels, lifelines) · SQL (PostgreSQL, DuckDB, dbt) · Power BI (DAX, M) · Streamlit · FastAPI · Docker · MLflow · GitHub Actions · pytest · JavaScript
+
+**Domain:** statistical process control (p′ Laney, Cpk) · cost of poor quality · 8D root cause · ISO 9001:2015 · predictive maintenance (survival analysis) · demand forecasting and inventory
 
 ---
 
